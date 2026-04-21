@@ -1094,3 +1094,304 @@ h3 {
     transform: none;
   }
 }
+
+/* --- Mobile polish patch: tighter hero, no horizontal overflow, compact phone mockup --- */
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 840px) {
+  .site-header {
+    position: sticky;
+  }
+
+  .nav-shell {
+    height: 72px;
+  }
+
+  .nav-links {
+    padding: 34px 24px;
+  }
+
+  .hero.section-pad {
+    padding: 54px 0 62px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
+
+  h1 {
+    max-width: 12ch;
+    font-size: clamp(3rem, 13vw, 4.4rem);
+    line-height: 0.92;
+    letter-spacing: -0.075em;
+  }
+
+  .hero-subtitle {
+    max-width: 36rem;
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    padding: 0 0 6px;
+  }
+
+  .phone-card {
+    width: min(320px, 86vw);
+    min-height: 500px;
+    border-width: 10px;
+    border-radius: 38px;
+  }
+
+  .phone-content {
+    padding: 30px 20px 22px;
+  }
+
+  .phone-content h2 {
+    font-size: 1.95rem;
+    letter-spacing: -0.055em;
+  }
+
+  .progress-ring {
+    width: 148px;
+    height: 148px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 0 22px #f4f6ff, 0 18px 38px rgba(52, 87, 255, 0.18);
+  }
+
+  .progress-ring span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .phone-content li {
+    padding: 11px 12px;
+    font-size: 0.93rem;
+  }
+
+  .ai-badge,
+  .mini-card {
+    width: min(320px, 86vw);
+    max-width: none;
+    margin-top: 10px;
+    padding: 13px 15px;
+    border-radius: 18px;
+    font-size: 0.92rem;
+    line-height: 1.3;
+  }
+
+  .mini-card {
+    gap: 2px;
+  }
+
+  .strip-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    text-align: left;
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+  }
+
+  .strip-grid span {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--white);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .container,
+  .nav-shell {
+    width: min(100% - 28px, var(--max));
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand strong {
+    font-size: 0.98rem;
+  }
+
+  .brand small {
+    font-size: 0.72rem;
+    letter-spacing: 0.01em;
+  }
+
+  .hero.section-pad {
+    padding: 42px 0 52px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+  }
+
+  h1 {
+    max-width: 11ch;
+    margin-bottom: 18px;
+    font-size: clamp(2.72rem, 12.4vw, 3.45rem);
+    line-height: 0.94;
+    letter-spacing: -0.068em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 9.6vw, 2.85rem);
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 1.18rem;
+  }
+
+  .hero-subtitle,
+  .narrow p,
+  .split-copy p,
+  .local-card p,
+  .cta-copy p {
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    min-height: 50px;
+    padding: 0 18px;
+  }
+
+  .trust-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .trust-pills span {
+    justify-content: center;
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+
+  .phone-card {
+    width: min(292px, 88vw);
+    min-height: 440px;
+    border-width: 8px;
+    border-radius: 34px;
+  }
+
+  .phone-top span {
+    width: 62px;
+    height: 6px;
+  }
+
+  .phone-content {
+    padding: 24px 17px 18px;
+  }
+
+  .phone-label {
+    font-size: 0.68rem;
+  }
+
+  .phone-content h2 {
+    font-size: 1.68rem;
+    margin-bottom: 16px;
+  }
+
+  .progress-ring {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 17px;
+    box-shadow: inset 0 0 0 18px #f4f6ff, 0 14px 30px rgba(52, 87, 255, 0.16);
+  }
+
+  .progress-ring span {
+    width: 32px;
+    height: 32px;
+  }
+
+  .phone-content ul {
+    gap: 9px;
+  }
+
+  .phone-content li {
+    padding: 9px 10px;
+    border-radius: 12px;
+    font-size: 0.86rem;
+  }
+
+  .ai-badge,
+  .mini-card {
+    width: min(292px, 88vw);
+    padding: 11px 13px;
+    font-size: 0.86rem;
+  }
+
+  .section-pad,
+  .split-section,
+  .cta-section {
+    padding: 62px 0;
+  }
+
+  .local-section {
+    padding-bottom: 62px;
+  }
+
+  .feature-grid,
+  .steps-grid {
+    margin-top: 32px;
+  }
+
+  .local-card,
+  .feature-card,
+  .step-card,
+  .quote-card,
+  .form-wrap,
+  .panel-card,
+  .accordion-card {
+    padding: 22px;
+  }
+
+  .local-list span {
+    padding: 9px 12px;
+    font-size: 0.88rem;
+  }
+
+  .metric-grid div {
+    min-height: 124px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2.52rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .phone-card,
+  .ai-badge,
+  .mini-card {
+    width: min(274px, 90vw);
+  }
+}
